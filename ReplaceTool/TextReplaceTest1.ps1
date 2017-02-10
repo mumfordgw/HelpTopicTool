@@ -3,7 +3,7 @@
 
     An automated test for the TextReplace.ps1 script
 
-    Version 1    Graham Mumford    01/02/2017
+    Version 1    Graham Mumford    10/02/2017
 
 #>
 
@@ -26,6 +26,7 @@ try
 catch
 {
     Write-Error("Failed to run script - error is"+$Error)
+    Exit
 }
 try
 {

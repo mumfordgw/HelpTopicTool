@@ -9,15 +9,26 @@
   Parameters are -
       .\TextReplace.ps1 inputFile outputFile replacementsFile
   
-   Version 1    Graham Mumford    30/01/2017
+  This script takes as input a file containing replacement
+  specifications in the form -
+      fromString toString
+  The script replaces all occurences of each replacement spec
+  in the inputFile and writes the updated contents to outputFile.
+
+  This is NOT a general purpose script. It was written with the
+  express intention of amending URLs of Windows HTML help files
+  in Windows help studio index (*.HHK) and table of contents (HHC)
+  files. 
   
-   Test Files -
+  Version 1    Graham Mumford    10/02/2017
+  
+  Test Files -
 
-       Input        - hsc599_hhk.htm
-       Output       - hsc599_mod.htm
-       Replacements - replacements.txt
+      Input        - hsc599_hhk.htm
+      Output       - hsc599_mod.htm
+      Replacements - replacements.txt
 
-       Command      - .\TextReplace.ps1 hsc599_hhk.htm hsc599_mod.htm replacements.txt
+      Command      - .\TextReplace.ps1 hsc599_hhk.htm hsc599_mod.htm replacements.txt
 #>
 
 pwd
@@ -37,6 +48,7 @@ try
 catch
 {
     Write-Error("Failed to read input file - error is"+$Error)
+    Exit
 }
 finally
 {
@@ -50,30 +62,13 @@ finally
 try
 {
    
-   # The lines below that are commented out read the whole file
-   # into a single array element which isn't too helpful in this
-   # scenario
-   #$reader = [System.IO.StreamReader] $pathToReplacementsFile
-   #$replacementData = $reader.ReadToEnd()
-   #$reader.close()
-
    $replacementData = get-content $pathToReplacementsFile
 }
 catch
 {
     Write-Error("Failed to read replacements file - error is"+$Error)
+    Exit
 }
-#finally
-#{
-#   if ($reader -ne $null)
-#   {
-#       $reader.dispose()
-#   }
-#}
-
-# perform the replacements
-
-# BUG!!! reads whole file into single element in the array!!
 
 foreach ($replacementSpec in $replacementData)
 {
@@ -90,6 +85,7 @@ foreach ($replacementSpec in $replacementData)
     catch
     {
         Write-Error("Failed to parse replacement spec :"+$replacementSpec+" error is"+$Error)
+        Exit
     }
 
     # perform the replacement
@@ -106,6 +102,7 @@ try
 catch
 {
     Write-Error("Failed to write output file - error is"+$Error)
+    Exit
 }
 finally
 {
