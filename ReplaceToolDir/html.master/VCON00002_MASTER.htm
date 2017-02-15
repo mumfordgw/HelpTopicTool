@@ -1,0 +1,40 @@
+<HTML><HEAD>
+	
+	<TITLE>Displaying/Changing System Wide Trust Controls (dialog)</TITLE>
+	
+	<META NAME="AUTHOR" CONTENT="VCON Help Version 430.01">
+	<META NAME="GENERATOR" CONTENT="HelpScribble 7.7.7">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080" ALINK="#FF0000">
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="4">Displaying/Changing System Wide Trust Controls</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">The system wide trust controls allow you to specify how the trusts associated with the various catalogued objects (e.g. OMF libraries, Services, SAPs, Tasks, VDUs) are to be used.&nbsp;&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">You may supply an <A HREF="VCON02240.htm">Authorisation Code</A> if one is relevant.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">For <A HREF="VCON02340.htm">VCON Centre</A> users, you may specify the <A HREF="VCON03460.htm">Read From Location</A> and/or the <A HREF="VCON03470.htm">Update Locations</A> to indicate which locations you want the details read from and to which locations you want any updates sent.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">You can specify:</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">whether or not route trusts associated with SAPs and catalogued VDUs are to be used. This facility allows you to control the use of security related commands by users logging in from remote systems. You will need to ensure that the appropriate trusts are put on the DISAPs representing both local and remote systems. See <A HREF="VCON02460.htm">Use of Route Trusts</A></FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">whether or not service trusts associated with MAC, BATCH, and OPER services are to be used. This facility allows you to control which trusted commands can be used from which work management services. See <A HREF="VCON02470.htm">Use of Service Trusts</A></FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">whether or not&nbsp; trusts associated with Tasks (including System Tasks and Spoolers) are to be used. This facility allows you to control the security related commands that can be called within your system tasks (including those written by your own staff and by third parties). See <A HREF="VCON02460.htm">Use of Task Trusts</A></FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">whether or not trusts associated with OMF libraries that are assigned for execute are to be used. This facility allows you to control which security related commands can be used when certain OMF libraries have been assigned for Execute access. Normally this will not be required. See <A HREF="VCON02480.htm">Use of OMF Library Trusts</A></FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">You can also decide:</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">whether or not loss of trusts is to be block structured. This is normally only necessary if OMF library trusts are being used;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">whether or not trust violations are to be logged to the VDU screen. This is useful when first introducing the trusts option since users are given immediate notification of which trust they require. (Note that violations are always logged to the audit journal);</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">what public trust overrides are to be used. You can set the public trust overrides to <A HREF="VCON02120.htm">System High</A> or <A HREF="VCON02130.htm">System Low</A> or you can select the specific trusts you want. See <A HREF="VCON02500.htm">Use of Public Trust Overrides</A>.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">Press the Update button to send your changes to VME.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">Press the Cancel button to exit from the dialogue. If you press Cancel without pressing the Update button, no changes will be made.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;">
+</P>
+</BODY></HTML>

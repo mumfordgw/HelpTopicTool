@@ -1,0 +1,52 @@
+<HTML><HEAD>
+	
+	<TITLE>Displaying/Changing System Wide Audit Controls (dialog)</TITLE>
+	
+	<META NAME="AUTHOR" CONTENT="VCON Help Version 430.01">
+	<META NAME="GENERATOR" CONTENT="HelpScribble 7.7.7">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000FF" VLINK="#800080" ALINK="#FF0000">
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="4"><B>Displaying System Wide Audit Controls</B></FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">The System Wide Audit Controls allow you to display and/or change the audit requirements for the system as a whole.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">You may supply an <A HREF="authorisation_code.htm">Authorisation Code</A> if one is relevant.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">For <A HREF="vcon_centre.htm">VCON Centre</A> users, you may specify the <A HREF="changing_the_read_from_location.htm">Read From Location</A> and/or the <A HREF="changing_the_update_locations.htm">Update Locations</A> to indicate which locations you want the details read from and to which locations you want any updates sent.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">The system wide audit controls specify:</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">whether or not changes to permissions are to be audited. Auditing should normally be requested</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">whether or not changes to&nbsp; security classifications are to be audited (HSO only). Auditing should normally be requested</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">whether audit journal messages are to be redirected to the system journal, if the audit journal becomes full, or simply lost. Redirection should be the normal state</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">the <A HREF="minimum_audit_trusts.htm">Minimum Audit trusts</A> which define the set of trusts for which allowed use will be audited in all VMs;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">the <A HREF="default_audit_trusts.htm">Default Audit trusts</A> which are those audit trusts given to users or persons when they login if they have not previously been given any explicit audit trusts;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">the <A HREF="1mt3h85.htm">Subject Access Object Auditing</A> which controls system-wide auditing of accesses to catalogued objects;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">the name of the current audit journal.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;margin-left:35pt;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">All these features (except for the name of the audit journal) can be changed using this dialogue box.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">In addition, you can request a new audit journal using the Switch Audit Journal button (this will be activated immediately). Journals are usually switched automatically by daily house-keeping, but if you need to switch the journal explicitly (e.g. because it has filled up) you may do so.&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">Minimum Audit Trusts and Default Audit Trusts can be set to '<A HREF="system_high_trusts.htm">System High</A><U>'</U>, or '<A HREF="system_low_trusts.htm">System Low</A>', or you may define a specific subset of trusts to be audited.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">Subject Access Object auditing can be set to 'All' or 'None', or you can specify exactly which sorts of access to each type of object that you would like to have audited. You must be careful about the level of Subject Access Object auditing that you apply, because a high level of auditing can decrease system performance. You are very unlikely to need to select 'All'.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">Press the Update button to get VME to action your changes.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">Press the Cancel button to exit from the dialogue. If you press Cancel before pressing the Update button no changes will be made to the System Wide Audit Controls.</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3"><B>Related topics</B></FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3">&nbsp;</FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3"><A HREF="using_minimum_audit_trusts.htm">Using Minimum Audit Trusts</A></FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3"><A HREF="using_default_audit_trusts.htm">Using Default Audit Trusts</A></FONT></P>
+<P STYLE="margin-top:0;margin-bottom:0;"><FONT FACE="Arial" SIZE="3"><A HREF="auditing_catalogued_objects.htm">Auditing Catalogued Objects</A>
+</FONT>
+</P>
+</BODY></HTML>
